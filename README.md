@@ -1,2 +1,2 @@
-# leetcode
-Only for LeetCode submitted code
+# Algorithm-questions
+Only for LeetCode and hackerrank submitted code
