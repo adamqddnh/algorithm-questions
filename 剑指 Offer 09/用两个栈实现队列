@@ -1,0 +1,32 @@
+class CQueue(object):
+
+    def __init__(self):
+        self.head = []
+        self.tail = []
+
+    def appendTail(self, value):
+        """
+        :type value: int
+        :rtype: None
+        """
+        self.tail.append(value)
+
+    def deleteHead(self):
+        """
+        :rtype: int
+        """
+        if len(self.head) > 0:
+            return self.head.pop()
+        if len(self.tail) == 0:
+            return -1
+        i = len(self.tail) - 1
+        while i >= 0:
+            self.head.append(self.tail.pop())
+            i -= 1
+        return self.head.pop()
+
+
+# Your CQueue object will be instantiated and called as such:
+# obj = CQueue()
+# obj.appendTail(value)
+# param_2 = obj.deleteHead()
